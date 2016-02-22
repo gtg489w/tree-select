@@ -1,0 +1,7 @@
+html, body {
+	font-family: Helvetica, Arial, sans-serif;
+	background: #ddd;
+}
+.container {
+	width: 400px;
+}
