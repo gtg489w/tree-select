@@ -1,47 +1,56 @@
 .tree-select {
-  position: relative;
-  cursor: pointer;
+	position: relative;
+	cursor: pointer;
 }
 .tree-select-selected {
-  border: 1px solid #c0ced9;
-  background: #fff;
-  padding: 4px 12px;
+	border: 1px solid #c0ced9;
+	background: #fff;
+	padding: 4px 12px;
 }
-.tree-select i {
-  float: right;
-  margin-left: 12px;
+.tree-select .tree-select-selected i {
+	float: right;
+	margin-left: 12px;
 }
 .tree-select-options {
-  display: none;
-  position: absolute;
-  background: #fff;
-  width: 100%;
-  max-height: 300px;
-  overflow: auto;
-  left: 0px;
-  top: 100%;
-  margin-top: -1px;
-  border: 1px solid #c0ced9;
+	display: none;
+	position: absolute;
+	background: #fff;
+	width: 100%;
+	max-height: 300px;
+	overflow: auto;
+	left: 0px;
+	top: 100%;
+	margin-top: -1px;
+	border: 1px solid #c0ced9;
 }
 .tree-select-options.open {
-  display: block;
+	display: block;
 }
 .tree-select-options ul {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
 }
 .tree-select-options li {
-  margin-left: 24px;
-  cursor: pointer;
+	margin-left: 24px;
+	cursor: pointer;
 }
 .tree-select-options ul:first-child > li {
-  margin-left: 0px;
+	margin-left: 0px;
 }
 .tree-select-options li div {
-  padding: 6px 12px;
-  transition: all .4s ease;
+	padding: 6px 12px;
+	transition: all .4s ease;
 }
 .tree-select-options li div:hover {
-  background: #c0ced9;
+	background: #c0ced9;
+}
+.tree-select-level-up {
+	opacity: .5;
+}
+.tree-select-focus {
+	position: absolute;
+	top: 1px;
+	z-index: -1;
+	outline: none;
 }

@@ -1,17 +1,25 @@
-<div class="tree-select" ng-click="open = !open">
+<div class="tree-select" ng-click="open($event)">
+	
 	<script type="text/ng-template" id="tree-select-node.html">
-		<div ng-click="select(data, $event);">{{ data.name }}</div>
+		<div ng-click="select(data, $event);" ng-class="{'tree-select-level-up' : data.type == 'major-up'}">
+			<span ng-if="data.type != 'major-up'">{{ data.name }}</span>
+			<span ng-if="data.type == 'major-up'"><i class="fa fa-level-up"></i> More</span>
+		</div>
 		<ul>
 			<li ng-repeat="data in data.children" ng-include="'tree-select-node.html'"></li>
 		</ul>
 	</script>
+
+
 	<div class="tree-select-selected">
-		<i class="fa" ng-class="{'fa-chevron-down': !open, 'fa-chevron-up': open}"></i>
+		<i class="fa" ng-class="{'fa-chevron-down': !opened, 'fa-chevron-up': opened}"></i>
 		{{ selectedNode ? selectedNode.name : default }}
 	</div>
-	<div class="tree-select-options" ng-class="{ 'open': open }">
+	<div class="tree-select-options" ng-class="{ 'open': opened }">
 		<ul>
 			<li ng-repeat="data in visibleTree" ng-include="'tree-select-node.html'"></li>
 		</ul>
 	</div>
+
+	<input type="text" ng-blur="blur()" class="tree-select-focus" />
 </div>
