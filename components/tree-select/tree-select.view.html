@@ -12,7 +12,7 @@
 
 
 	<div class="tree-select-selected">
-		<i class="fa" ng-class="{'fa-chevron-down': !opened, 'fa-chevron-up': opened}"></i>
+		<i class="fa fa-chevron-down" ng-class="{'tree-select-indicator-opened': opened}"></i>
 		{{ selectedNode ? selectedNode.name : default }}
 	</div>
 	<div class="tree-select-options" ng-class="{ 'open': opened }">
