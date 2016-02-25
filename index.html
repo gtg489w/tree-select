@@ -5,71 +5,24 @@
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 		<title>Tree Select | Styling Example</title>
 
-		<link href="css/demo.css" rel="stylesheet">
-		<link href="css/treeselect.css" rel="stylesheet">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+		<link href="css/demo.css" rel="stylesheet" />
+		<script src="controllers/demo.js"></script>
+
+		<link href="components/tree-select/tree-select.style.css" rel="stylesheet" />
+		<script src="components/tree-select/tree-select.directive.js"></script>
 	</head>
-	<body>
-		<div class="container">
+	<body ng-app="app" class="ng-scope">
+		
 
-
-
-
-
-			<h1>Tree Select Styling</h1>
-			<div class="tree-select">
-				Select Department
-				<div class="tree-select-options">
-					<ul>
-						<li><div>...</div></li>
-						<li><div>Atlanta</div>
-							<ul>
-								<li><div>Technology Enablement</div>
-									<ul>
-										<li><div>Architecture &amp; Developmemt</div></li>
-										<li><div>Portals &amp; Collaboration</div>
-											<ul>
-												<li><div>Salesforce</div></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li><div>Experience Strategy &amp; Design</div>
-									<ul>
-										<li><div>Visual Design</div></li>
-										<li><div>Information Architecture</div></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><div>Atlanta</div>
-							<ul>
-								<li><div>Technology Enablement</div>
-									<ul>
-										<li><div>Architecture &amp; Developmemt</div></li>
-										<li><div>Portals &amp; Collaboration</div>
-											<ul>
-												<li><div>Salesforce</div></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li><div>Experience Strategy &amp; Design</div>
-									<ul>
-										<li><div>Visual Design</div></li>
-										<li><div>Information Architecture</div></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-
-
-
-
-
+		<div ng-controller="TestCtrl" style="margin: 20px;">
+			<tree-select default="Select Department" tree="departments" selected="8" majors="true"></tree-select>
 		</div>
-	</body>
+
+
+</body>
 </html>
